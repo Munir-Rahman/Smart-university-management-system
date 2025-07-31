@@ -1,0 +1,154 @@
+.dashboard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    width: 77vw;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    border: 2px solid #1f2937;
+    overflow-y: scroll;
+}
+.dashboard-inside{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    color: #1f2937;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: relative;
+}
+.dashboard-inside .admissiondetails-text{
+    text-align: left;
+}
+.dashboard-inside .dashboard-text{
+    position: relative;
+    font-size: 2rem;
+    padding: 5px;
+    text-align: center;
+    border-bottom: 2px solid #1f2937;
+}
+.admissiondetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.admissiondetails .details-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32%;
+    height: 120%;
+    color: #fff;
+    box-shadow: 0 0 5px 5px #111827;
+    border-radius: 10px;
+    padding: 0.7rem;
+    font-weight: 600;
+} 
+.admissiondetails .details-box:nth-child(1){
+    background-color: rgb(17, 90, 192);
+}
+.admissiondetails .details-box:nth-child(2){
+    background-color: aqua;
+}
+.admissiondetails .details-box:nth-child(3){
+    background-color: rgb(250, 213, 49);
+}
+.applicat-num{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+}
+.details-box:nth-child(1) .applicat-num{
+    border-bottom: 8px solid rgb(10, 77, 170);
+    border-radius: 0.3rem;
+}
+.details-box:nth-child(2) .applicat-num{
+    border-bottom: 8px solid rgb(9, 179, 179);
+    border-radius: 0.3rem;
+}
+.details-box:nth-child(3) .applicat-num{
+    border-bottom: 8px solid rgb(186, 155, 14);
+    border-radius: 0.3rem;
+}
+.logo img{
+    height: 2rem;
+    width: 2rem;
+}
+.view-details{
+    display: flex;
+    justify-content: space-between;    
+}
+.view-details .icon{
+    height: 1rem;
+    width: 1rem;
+}
+.view-details a,
+.view-details a:any-link,
+.view-details a:checked{
+    color: #1f2937;
+    font-weight: 400;
+    text-decoration: none;
+}
+.view-details a:hover{
+    text-decoration: underline;
+}
+.dashboard-inside{
+    margin-bottom: 1rem;
+}
+.recent-applicant{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    border: 2px solid #1f2937;
+}
+.recent-applicant .top-text h2{
+    border: 1px solid #1f2937;
+}
+.recent-applicant h2{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 5px;
+    font-size: 1rem;
+    background-color: rgb(221, 215, 215);
+    border-bottom: 2px solid #1f2937;
+}
+.recent-applicant .recent-table{
+    margin: 0.7rem;
+    border-collapse: collapse;
+}
+.recent-table thead,
+.recent-table th,
+.recent-table td,
+.recent-table tbody{
+    font-weight: 600;
+    color: #1f2937;
+    text-align: left;
+    font-size: 1rem;
+    padding: 5px;
+    border: 1px solid #111827;
+}
+.hide{
+    display: none;
+}
+
+/* Let Creat Responsive Website*/
+/* Big Mobile */
+@media (max-width : 768px){
+    .dashboard{
+        width: 100%;
+    }
+}
+/* Small Mobiles */
+@media (max-width : 480px){
+    .details-box h3{
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,800 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    position: relative;
+    background-color: #f3f4f6;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height: 4rem;
+    width: 100%;
+    font-weight: 600;
+    padding: 0.4rem;
+    color: #fff;
+    background-color: #111827;
+    border-bottom: 1px solid #ffffff;
+}
+nav .message{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem;
+    height: 100%;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.message .notification{
+    position: relative;
+}
+.notification button{
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.notification .number{
+    font-size: 1.5rem;
+}
+.menu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: -18rem;
+    width: 19.83rem;
+    height: 24vh;
+    background-color: #2b384a;
+    overflow: hidden;
+    overflow-y: auto;
+    z-index: 2;
+}
+.menu li{
+    display: block;
+    list-style-type: none;
+    word-wrap: break-word;
+    font-size: 1rem;
+    padding: 12px;
+    color: #fff;
+    text-align: center;
+    background: #111827;
+    border-bottom: 2px solid rgb(145, 157, 157);
+}
+.menu li:hover{
+    background: #171e2d;
+}
+/* Unread Mesages */
+.menu .unread{
+    background-color: #111827;
+}
+.menu .read{
+    background-color: #2e3646;
+}
+main{
+    display: flex;
+    overflow: hidden;
+}
+.right-side{
+    height: 90vh;
+    overflow-y: scroll;
+    overflow-x: scroll;
+
+}
+/* Side Bar */
+aside{
+    display: flex;
+    height: 91.7vmin;
+    width: 40vmin;
+    border: 2px solid #111827;
+}
+.side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    list-style-type: none;
+}
+.side li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    font-weight: 600;
+    font-size: 1.5rem;
+    height: 12.5%;
+    width: 100%;
+    background-color: #111827;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+}
+.side li:hover{
+    background-color: #1f2937;
+    color: #ffffff;
+    box-shadow: 0 0 10px 10px #ffffff;
+}
+.Admission{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    width: 75vw;
+}
+.Admission .choosingbtns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 80vw;
+    height: 80vh;
+    gap: 2rem;
+}
+.choosingbtns .btnouter{
+    width: 20rem;
+    height: 9rem;
+}
+.btnouter button{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: #111827;
+    color: #ffffff;
+    transition: .5s ease;
+}
+.btnouter button:hover{
+    transform: scale(1.1);
+    font-size: 1.6rem;
+    background-color: #1f2937;
+}
+.btnouter button:active{
+    background-color: #101720;
+}
+.Admission .container{
+    border: 2px solid #1f2937;
+    border-radius: 1rem;
+    background-color: #111827;
+}
+.container h2{
+    color: #fff;
+}
+.Admission .container2{
+    border: 2px solid #1f2937;
+    border-radius: 1rem;
+    background-color: #111827;
+}
+.container2 h2{
+    color: #fff;
+}
+/* Teacher */
+.teacherform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #1f2937;
+    border-radius: 1rem;
+    padding-bottom: 1rem;
+}
+/* Student */
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    padding-bottom: 1rem;
+}
+.gobackbtnform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f2937;
+    border-radius: 1rem;
+    height: 2.5rem;
+    width: 4.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+.gobackbtnform button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: transparent;
+    border-radius: 1rem;
+    height: 100%;
+    width: 100%;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0.3rem;
+    border: 1px solid #fff;
+}
+.gobackbtnform button:hover{
+    color: #ffffff;
+    background-color: #111827;
+}
+.Admission .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    color: #111827;
+}
+.Admission .image-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15rem;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    
+}
+.image img{
+    width: 200px;
+    height: 200px;
+    margin: 0px 0px 0px 0px;
+    border-radius: 50%;
+    padding: 2px;
+    background-size: cover;
+    object-fit: cover;
+    box-shadow: 0 0 10px 10px #1f2937;
+    color: #fff;
+}
+#imageupload{
+    color: #fff;
+    margin-right: -120px;
+}
+/* Teacher */
+#imageupload2{
+    color: #fff;
+    margin-right: -120px;
+}
+/* Form */
+.details{
+    display: grid;
+    grid-template-columns: repeat(3,0fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+.input-box{
+    display: flex;
+    align-items: center;
+    height: 1.9rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    border: 2px solid #1f2937;
+}
+.input-box:hover{
+    box-shadow: 0 0 10px 5px #1f2937;
+}
+.input-box label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 1.3rem;
+    color: #fff;
+    background-color: #1f2937;
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+}
+.input-box input{
+    font-size: 1.3rem;
+    color: #1f2937;
+    border: none;
+    outline: none;
+    padding: 0 10px 0 10px;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.input-box .select{
+    font-size: 1.3rem;
+    color: #1f2937;
+    border: none;
+    outline: none;
+    padding: 0 10px 0 10px;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    width: auto;
+}
+.input-box input::placeholder{
+    font-size: 1rem;
+    color: #6b7280;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+    height: 2.5rem;
+    width: 10rem;
+    border-radius: 1rem;
+}
+.btn button{
+    height: 100%;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #1f2937;
+    box-shadow: 0 0 10px 5px #1f2937;
+    transition: .5s ease;
+    border: 1px solid #fff;
+}
+.btn button:hover{
+    color: #1f2937;
+    background-color: #fff;
+    transform: scale(1.05);
+}
+/* Added Message */
+.added-msg{
+    position: absolute;
+    top: 0rem;
+    right: 35%;
+    background-color: #10b981;
+    color: #fff;
+    height: 7rem;
+    width: 20rem;
+    font-size: 1.1rem;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 0.1rem;
+    z-index: 1000;
+}
+.added-msg span{
+    font-size: 2rem;
+    color: rgb(6, 23, 48);
+}
+/* Edit Form Cross Button */
+.cross{
+    font-size: 2rem;
+    color: #1f2937;
+    cursor: pointer;
+    text-align: right;
+}
+.added-msg span:hover{
+    color: #fff;
+}
+.added-msg h2{
+    padding-bottom: 1.8rem;
+}
+.added-msg .line{
+    background-color: #fff;
+    height: 0.5rem;
+    width: 100%;
+    animation: width 10s ease infinite;
+}
+@keyframes width {
+    from{
+        width: 100%;
+    }
+    to{
+        width: 0%;
+    }
+}
+/* Student */
+.students{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    width: 75vw;
+}
+.student{
+    display: table;
+    text-align: center;
+    width: 100%;
+    border: 3px solid #111827;
+}
+.student thead,
+.student tr,
+.student td,
+.student th{
+    border: 2px solid #1f2937;
+    border-collapse: collapse;
+    padding: 5px;
+    font-weight: 600;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+    word-wrap: wrap;
+    background-color: #1f2937;
+    color: #fff;
+}
+.student td a{
+    text-decoration: none;
+    color: #f97316;
+    background-color: #1f2937;
+}
+.student td a:hover{
+    text-decoration: underline;
+    background-color: #008080;
+}
+.student .thead{
+    font-weight: 600;
+    font-size: large;
+}
+/* Teachers */
+.Teachers{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    width: 75vw;
+}
+.teacherstable{
+    display: table;
+    width: 100%;
+    text-align: center;
+}
+.teacherstable{
+    border: 3px solid #1f2937;
+}
+.teacherstable thead,
+.teacherstable tr,
+.teacherstable td,
+.teacherstable th{
+    border: 2px solid #fff;
+    border-collapse: collapse;
+    padding: 5px;
+    font-weight: 600;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+    word-wrap: wrap;
+    background-color: #1f2937;
+    color: #fff;
+}
+.teacherstable td a{
+    text-decoration: none;
+    color: #f97316;
+    cursor: pointer;
+}
+.teacherstable td a:hover{
+    background-color: #008080;
+    color: #1f2937;
+    text-decoration: underline;
+}
+.teacherstable .thead{
+    font-weight: 600;
+    font-size: large;
+}
+/* Number Filed */
+.teacherstable .numbertd,
+.students .numbertd{
+    height: 1.3rem;
+    width: 3.1rem;
+}
+/* Edit Form */
+.edit-form-outer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    background-color: rgba(255,255,255,0.3);
+    z-index: 1000;
+}
+.edit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    border: 2px solid #111827;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+.tabletop-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+    border: 2px solid #fff;
+}
+.tabletop-text:hover{
+    color: #1f2937;
+    background-color: #fff;
+}
+/* Mobile Menu */
+header .menu-icon{
+    justify-content: flex-start;
+    height: 2.3rem;
+    background-color: #1f2937; 
+    font-size: 2rem;
+    padding-left: 0.5rem;
+    text-align: left;
+}
+.menu-icon img{
+    text-align: left;
+    height: 100%;
+    width: 100%;
+}
+.mobile-menu{
+    position: fixed;
+    left: 0;
+    top: 10;
+    height: 90vh;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    z-index: 1000;
+    background-color: #1f2937;
+}
+.mobile-menu #menu{
+    text-align: left;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.hide{
+    display: none;
+}
+
+/* Let Creat Responsive Website*/
+/* Big */
+@media (min-width : 1441px){
+    .added-msg{
+        position: absolute;
+        width: 30%;
+        left: 40%;
+        top: 2%;
+        height: 8rem;
+        font-size: 1rem;
+    }
+    .added-msg .cross{
+        font-size: 2rem;
+    }
+    .added-msg span{
+        font-size: 1rem;
+    }
+    .menu-icon{
+        display: none;
+    }
+    .mobile-menu{
+        display: none;
+    }
+    .menu-icon .side-icon{
+        display: none;
+    }
+    .menu-icon .side-icon img{
+        display: none;
+    }
+    .hide{
+        display: none;
+    }
+}
+
+/* Desktop */
+@media (min-width : 1025px){
+    aside{
+        height: 93vh;
+        width: 20%;
+    }
+    .menu-icon{
+        display: none;
+    }
+    .mobile-menu{
+        display: none;
+    }
+    .details{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }   
+    table td:nth-child(9),
+    table th:nth-child(9){
+        display: none;
+    }
+    .menu-icon .side-icon{
+        display: none;
+    }
+    .menu-icon .side-icon img{
+        display: none;
+    }
+    .hide{
+        display: none;
+    }
+}
+
+/* Laptop */
+@media (max-width : 1024px){
+    .added-msg{
+        width: 50%;
+        left: 30%;
+        top: 2%;
+        height: 8rem;
+        font-size: 1rem;
+    }
+    .added-msg .cross{
+        font-size: 2rem;
+    }
+    .added-msg span{
+        font-size: 1rem;
+    }
+    .menu-icon{
+        display: none;
+    }
+    .side-bar2{
+        display: none;
+    }
+    aside{
+        height: 93vh;
+        width: 25%;
+    }
+    .details{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 1rem;
+        margin-left: 8rem;
+        padding: 1rem;
+    }s
+    .right-side .Admission{
+        overflow-x: scroll;
+        width: 110%;
+    }
+    .right-side .details{   
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .details .form{
+        width: 100%;
+    }
+    .students,
+    .Teachers{
+        width: 90vw;
+    }
+    table td:nth-child(9),
+    table td:nth-child(3),
+    table th:nth-child(9),
+    table th:nth-child(3){
+        display: none;
+    }
+    .hide{
+        display: none;
+    }
+}
+
+/* Big Mobile */
+@media (max-width : 768px){
+    .welcome-msg{
+        font-size: 1.1rem;
+    }
+    .menu-icon{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .side-bar1{
+        display: none;
+    }
+    .added-msg{
+        width: 60%;
+        left: 20%;
+        top: 2%;
+        height: 8rem;
+        font-size: 1rem;
+    }
+    .added-msg .cross{
+        font-size: 2rem;
+    }
+    .added-msg span{
+        font-size: 1rem;
+    }
+    .details{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .laptop-menu{
+        display: none;
+        height: 10vh;
+        width: 100%;
+    }
+    .right-side{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        overflow-x: scroll;
+        margin-left: 0.5rem;
+    }
+    .teacherstable{
+        justify-content: flex-start;
+    }
+    .hide{
+        display: none;
+    }
+}
+/* Small Mobiles */
+@media (max-width : 480px){
+    .welcome .welcome-msg{
+        font-size: 1rem;
+    }
+    .menu-icon{
+        display: flex;
+    }
+    .mobile-menu{
+        width: 100%;
+    }
+    .added-msg{
+        width: 90%;
+        left: 5%;
+        top: 2%;
+        height: 8rem;
+        font-size: 1rem;
+    }
+    .added-msg .cross{
+        font-size: 2rem;
+    }
+    .added-msg span{
+        font-size: 1rem;
+    }
+    .details{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+    table th:nth-child(6),
+    table th:nth-child(10),
+    table td:nth-child(6),
+    table td:nth-child(10){
+        display: none;
+    }
+    .students,.Teachers{
+        width: 100%;
+        margin: 0;
+        justify-content: start;
+        overflow-x: auto;
+    }
+    .right-side{
+        margin: 0;
+        justify-content: flex-start;
+    }
+    .Teachers{
+        width: 100%;
+        overflow-x: auto;
+    }
+    .hide{
+        display: none;
+    }
+}

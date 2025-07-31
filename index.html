@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart University Management System</title>
+    <meta name="author" content="Munir Rahman Rahmani">
+    <meta name="description" content="SUMS - A Smart University Management System Built for Modern Education Management">
+    <meta name="keywords" content="SUMS, Smart University Management System, University system, education management, HTML, CSS, JS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="icon" href="icons/logo.svg">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="image">
+                    <img src="icons/logo.svg" alt="SUMS Logo">
+                </div>
+                <div class="logo-text">
+                    <span>Smart University Management System</span>
+                </div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#help">Help</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li id="login">Login</li>
+                </ul>
+            </div>
+            <div class="drop-down">
+                <p class="menu-name">
+                    <img src="images/menu-svgrepo-com.svg" alt="menu-icon">
+                </p>
+                <div class="dropdown-menu hide">
+                    <ul>
+                        <li class="close">✖</li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#help">Help</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li id="login">Login</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="home" class="home">
+            <div class="home-image">
+                    <div class="home-image-text">
+                        <h2 class="first-text">WELCOME TO SMART UNIVERSITY MANAGEMENT SYSTEM</h2>
+                        <h2 class="second-text">Growing Minds From 2025</h2> 
+                            <div class="button">
+                                <button><a href="#apply">Apply Now</a></button>
+                            </div>
+                    </div>
+            </div>
+        </div>
+
+        
+        <!-- Apply Now -->
+        <div class="apply-now" id="apply">
+            <div class="form-outer">
+                <div class="head-text">
+                    <h2>Apply Now</h2>
+                </div>
+                <form action="" class="form">
+                            <div class="input-box">
+                                <label for="username">Username&nbsp;</label>
+                                <input type="text" required name="username"
+                                    placeholder="Enter Username eg.Munir Rahman">
+                            </div>
+                            <div class="input-box">
+                                <label for="FName">F/Name&nbsp;</label>
+                                <input type="text" required name="FName"
+                                    placeholder="Enter Father Name eg.Munir Rahman">
+                            </div>
+                            <div class="input-box">
+                                <label for="Gender">Gender&nbsp;</label>
+                                <select name="Gender" id="Gender" class="select" required>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                            <div class="input-box">
+                                <label for="Faculty">Faculty&nbsp;</label>
+                                <input type="text" required name="Faculty"
+                                    placeholder="Enter Faculty eg.Computer Science">
+                            </div>
+                            <div class="input-box">
+                                <label for="Phone">Phone&nbsp;</label>
+                                <input type="text" required name="Phone"
+                                    placeholder="Enter Phone with Country Code eg.+93777777777">
+                            </div>
+                            <div class="input-box">
+                                <label for="Email">Email&nbsp;</label>
+                                <input type="text" required name="Email" placeholder="Enter Email eg.example@gmai.com">
+                            </div>
+                            <div class="input-box">
+                                <label for="Shift">Shift&nbsp;</label>
+                                <select name="Shift" id="shift" class="select" required>
+                                    <option value="PM">PM</option>
+                                    <option value="AM">AM</option>
+                                </select>
+                            </div>
+                            <div class="input-box">
+                                <label for="Age">Age&nbsp;</label>
+                                <input type="number" required name="Age" min="15" max="50">
+                            </div>
+                            <div class="input-box">
+                                <label for="Semester">Semeter&nbsp;</label>
+                                <input type="number" required name="Semester" max="8" min="1" value="1">
+                            </div>
+                            <div class="input-box">
+                                <label for="Password">Password&nbsp;</label>
+                                <input type="password" required name="Password" placeholder="Enter Unique Password">
+                            </div>
+                        <div class="btn">
+                            <button id="submitbtn">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="after-apply hide">
+            <div class="container">
+                <img src="icons/check-circle.svg" alt="">
+                <p>Your Application Have Been Successfully Submited</p>
+                <p>Your Account Will be Accessable in Next 24Hourse</p>
+            </div>
+        </div>
+
+        <div class="contact" id="contact">
+            <div class="contact-details">
+                <div class="left-side">
+                    <h2>Get in Touch</h2>
+                    <h2 class="contact-msg">Contact me</h2>
+                    <p>Email : </p>
+                    <a class="email" href="mailto:munirrahmanrahmani0@gmail.com">munirrahmanrahmani0@gmail.com</a>
+                    <p>Phone: </p>
+                    <a href="tel:+93711717893">+93711717893</a>
+                </div>
+                <div class="right-side">
+                    <form action="" class="form">
+                        <input type="text" name="name" id="name" placeholder="Enter Your Name">
+                        <input type="email" name="email" id="email" placeholder="Enter Your Email add">
+                        <textarea name="message" id="message" placeholder="Enter Your Message"></textarea>
+                        <button>Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- About SUMS -->
+        <div class="about" >
+            <div class="about-container" id="about">
+                <div class="image">
+                    <!-- Add in CSS -->
+                </div>
+                <div class="about-text">
+                    <h2 class="top-text">About SUMS (Smart University Management System)</h2>
+                    <h2>SUMS is Modern University Management System Every University Can use for University and it is Very Easy and Modern System and all Users can use and Avialable for ADMIN, TEACHER and ADMIN and Can Login to System any Where and Any Time and SUMS is Best Choice for University to Use Modern Systems.</h2>
+                </div>
+            </div>
+            <div class="about-container" id="help">
+                <div class="image">
+                    <!-- Add in CSS -->
+                </div>
+                <div class="about-text">
+                    <h2 class="top-text">How to Use SUMS (Smart University Management System)</h2>
+                    <h2>Using SUMS is Very System if You Have Account Just Click by Login Button and Login to System. If You Don't Have Account Just Click by Apply button and Apply to SUMS and Your Account will be Accessable during 24Hourse and You Can Login to System by Details by which You Have Applied.</h2>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- About Founder -->
+        <div class="about-founder">
+            <div class="container">
+                <div class="image">
+                    <img src="images/Munir_Rahman.jpg" alt="Founder of SUMS Munir Rahman">
+                </div>
+                <div class="info">
+                    <h2>About the Founder</h3>
+                    <h2>Munir Rahman</h2>
+                    <p class="founder">Founder & Developer of SUMS (Smart University Management System)</p>
+                    <p>
+                    I'm Munir Rahman, a passionate developer and the creator of SUMS - Smart University Management System. This project was born from a vision to simplify and moderanize academic management through digital solutions. I belive in using technology to empower educational insitutions, making admin work faster, smarter, and more transparent.
+                    </p>
+                    <p>
+                        As a Student and Software enthusiast, I developed SUMS with real university needs in mind. I hope this system brings value and ease to teachers, students, and administrators alike
+                    </p>
+                    <p>
+                        <em>"Turing ideas into tools that serve edducation"</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 SUMS System | Released: July 31, 2025</p>
+        </footer>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>

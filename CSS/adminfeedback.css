@@ -1,0 +1,83 @@
+.feedback{
+    display: flex;
+    margin-top: 1rem;
+    width: 77vw;
+    height: 87vh;
+    margin-left: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+.feedback-inside{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    color: #fff;
+    background-color: #111827;
+    overflow-y: scroll;
+    position: relative;
+}
+.feedback-inside h2{
+    position: relative;
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+.feedback-inside h2::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0.2rem;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    transition: .5s ease;
+}
+.feedback-inside h2:hover::after{
+    width: 100%;
+}
+/* Table */
+.feedbacktable{
+    display: table;
+    margin-top: 1rem;
+    border: 2px solid #fff;
+}
+.feedbacktable th{
+    font-size: 1.2rem;
+}
+.feedbacktable thead,
+.feedbacktable th,
+.feedbacktable td,
+.feedbacktable tr,
+.feedbacktable tbody{
+    text-align: center;
+    border: 3px solid #fff;
+    border-collapse: collapse;
+    padding: 5px;
+    font-weight: 600;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+    word-wrap: wrap;
+    background-color: #1f2937;
+    color: #FFFFFF;
+}
+.feedbacktable th{
+    height: 1.3rem;
+    word-wrap: wrap;
+}
+.feedbacktable .thead th:nth-child(4){
+    width: 84%;
+} 
+.feedback-body td:nth-child(4){
+    width: 84%;
+    text-align: left;
+}
+.feedback-body td,
+.feedback-body th{
+    font-size: 1.2rem;
+}
+.hide{
+    display: none;
+}

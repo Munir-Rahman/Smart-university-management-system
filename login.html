@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/login.css">
+    <link rel="icon" href="icons/logo.svg">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <div class="top-text">
+                <div class="logo">
+                    <img src="icons/logo.svg" alt="logo">
+                </div>
+                <div class="system-name">
+                    <h2 class="portal">SUMS SYSTEM</h2>
+                </div>
+                <div class="login-role">
+                    <h3>Select Your Role to Login</h3>
+                </div>
+            </div>
+            <div class="bottom-part">
+                <div class="box" id="admin">
+                    <div class="logo">
+                        <img src="Icons/admin-svgrepo-com.svg" alt="admin-icon">
+                    </div>
+                    <div class="name">
+                        <span>Administrator</span>
+                    </div>
+                </div>
+                <div class="box" id="teacher">
+                    <div class="logo">
+                        <img src="Icons/teacher-svgrepo-com.svg" alt="teacher-icon">
+                    </div>
+                    <div class="name">
+                        <span>Teacher</span>
+                    </div>
+                </div>
+                <div class="box" id="student">
+                    <div class="logo">
+                        <img src="Icons/student-person-part-2-svgrepo-com.svg" alt="student-icon">
+                    </div>
+                    <div class="name">
+                        <span>Student</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="top-text">
+                <h2 id="login-name">Admin Login</h2>
+            </div>  
+            <div class="input-boxes">
+                <div class="input">
+                    <label for="username"><img src="icons/user.svg" alt="username"></label>
+                    <input type="text" name="username" id="username" placeholder="Enter Your Username">
+                </div>
+                <div class="input">
+                    <label for="password">
+                        <img src="icons/lock-alt-svgrepo-com.svg" alt="lock-icon">
+                    </label>
+                    <input type="password" name="password" id="password" placeholder="Enter Your Password">
+                </div>
+            </div>
+            <div class="login-btn">
+                <button id="login">Login</button>
+            </div>
+            <div class="demo">
+                <a id="demo_account">Demo Account</a>
+            </div>
+        </div>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>

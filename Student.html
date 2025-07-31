@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/student.css">
+    <link rel="icon" href="icons/logo.svg">
+    <title>Student</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="welcome">
+                <h2 class="welcome-msg"></h2>
+            </div>
+        </nav>
+        <div class="menu-icon">
+            <span id="side-icon">⇶</span>
+        </div>
+    </header>
+
+    <!-- Popup message -->
+    <div class="added-msg hide">
+        <span class="cross" id="popup">&times;</span>
+        <h2>✔ Feedback Send Successfully</h2>
+        <div class="line"></div>
+    </div>
+
+    <main>
+        <ul class="side mobile-menu hide" id="mobile-menu">
+                <li class="list" id="personal-details">PERSONAL DETAILS</li>
+                <li class="list" id="addresult">RESULT</li>
+                <li class="list" id="chats">CHATS</li>
+                <li class="list" id="feedback">FEEDBACK</li>
+                <li class="list" id="logout">LOGOUT <img src="icons/log-out.svg" ></li>
+        </ul>
+        <aside class="side-bar">
+            <ul class="side">
+                <li class="list" id="personal-details">PERSONAL DETAILS</li>
+                <li class="list" id="addresult">RESULT</li>
+                <li class="list" id="chats">CHATS</li>
+                <li class="list" id="feedback">FEEDBACK</li>
+                <li class="list" id="logout">LOGOUT <img src="icons/log-out.svg" ></li>
+            </ul>
+        </aside>
+
+        <div class="right-side">
+
+            <!-- Profile-->
+            <div class="profile">
+                <div class="profile-section">
+                    <div class="head-text">
+                        <h2>Personal Details</h2>
+                    </div>
+                    <div class="body" id="personal-body">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Check Result-->
+            <div class="result hide">
+                <div class="result-section">
+                    <h2 class="top-text">Grade Sheet</h2>
+                    <table class="result-table">
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>5% Quize</th>
+                                <th>20% Exam</th>
+                                <th>60% Test</th>
+                                <th>Grade</th>
+                                <th>Percentage</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody class="result-body">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Chat -->
+            <div class="chat hide">
+                    <div class="chat-page">
+                        <h2 class="top-text">Messaging Chat Application</h2>
+                        <div class="chat-page-body">
+                            <!-- All Students and Teachers Will Add Auto From Local Storage -->
+                            
+                        </div>
+                        <div class="chat-page-body2">
+                            
+                        </div>
+                    </div>
+
+                <!-- Inside of User Chat mean Messaging Page -->
+                <div class="chat-inside hide">
+                    <!-- Header of Chat -->
+                    <div class="chat-head">
+                        <!-- Chat Header Will be Auto Add of Every Person -->
+                    </div>
+
+                    <!-- Body of Chat -->
+                    <div class="chat-body">
+                        <!-- Auto Message -->
+                        
+                        <div class="chat-messages">
+                            <!-- It Will Add When You Send Message -->
+                        </div>
+                    </div>
+
+                    <!-- Chat Footer Send Message -->
+                    <div class="write-message">
+                        <div class="input-msg">
+                            <input type="text" id="msg-input" required placeholder="Enter Your Message to Send">
+                        </div>
+                        <div class="sendbtn">
+                            <button id="send-btn">▷</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feedback Option -->
+            <div class="feedback hide">
+                <div class="feedback-inside">
+                    <h2 class="top-text">FeedBack</h2>
+                    <form action="" class="feedbackform">
+                        <div class="input-box">
+                            <span>Position</span>
+                            <select name="position" id="position">
+                                <option value="Student" selected>Student</option>
+                            </select>
+                        </div>
+                        <div class="input-box">
+                            <span>Enter You Feedback About SUMS : </span>
+                            <textarea name="message" id="feedbackmessage"></textarea>
+                        </div>
+                        <div class="input-box">
+                            <span>Rate</span>
+                            <input type="number" name="rate" id="rate" max="5" min="1" value="5">
+                        </div>
+                        <div class="sendbutton">
+                            <button>Send Feedback</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/student.js"></script>
+</body>
+</html>

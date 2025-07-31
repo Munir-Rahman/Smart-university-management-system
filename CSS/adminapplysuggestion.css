@@ -1,0 +1,34 @@
+/* Apply Suggestion */
+.applysuggestion{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    width: 75vw;
+}
+.applysuggestion-table{
+    display: table;
+    text-align: center;
+    width: 100%;
+    border: 3px solid #1f2937;
+}
+.applysuggestion-table thead,
+.applysuggestion-table tr,
+.applysuggestion-table td,
+.applysuggestion-table th{
+    border: 2px solid #111827;
+    border-collapse: collapse;
+    padding: 5px;
+    font-weight: 600;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+    word-wrap: wrap;
+    background-color: #111827;
+    color: #fff;
+}
+.applysuggestion-table .thead{
+    font-weight: 600;
+    font-size: large;
+}
+.hide{
+    display: none;
+}

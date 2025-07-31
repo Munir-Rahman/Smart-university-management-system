@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/admin.css">
+    <link rel="stylesheet" href="CSS/adminchat.css">
+    <link rel="stylesheet" href="CSS/adminfeedback.css">
+    <link rel="stylesheet" href="CSS/admindashboard.css">
+    <link rel="stylesheet" href="CSS/adminapplysuggestion.css">
+    <link rel="icon" href="icons/logo.svg">
+    <title>Admin</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="welcome">
+                <h2 class="welcome-msg"></h2>
+            </div>
+            <div class="message">
+                <div class="notification">
+                    <h2><span class="number"></span><button id="notification-btn"><img src="icons/bell.svg" ></button></h2>
+                    <div class="notifications">
+                        <ul class="menu hide">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="menu-icon">
+            <span id="side-icon">
+                <img src="images/menu-svgrepo-com.svg" alt="menu-icon">
+            </span>
+        </div>
+    </header>
+    <!-- Popup message -->
+    <div class="added-msg hide">
+        <span class="cross" id="popup">&times;</span>
+        <h2>✔ Student Added Successfully</h2>
+        <div class="line"></div>
+    </div>
+
+    <!-- Edit Form Will Add Here -->
+    <div class="edit-form-outer hide">
+        <form action="" class="edit hide">
+            <span class="cross" id="editform">&times;</span>
+            <h2>Edit Details</h2>
+            <div class="input-box">
+                <label for="username">Username&nbsp;</label>
+                <input type="text" required id="editusername">
+            </div>
+            <div class="input-box">
+                <label for="FName">F/Name / Subject&nbsp;</label>
+                <input type="text" required id="editFName">
+            </div>
+            <div class="input-box">
+                <label for="Gender">Gender&nbsp;</label>
+                <select name="Gender" id="editGender" class="select" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <label for="Faculty">Faculty&nbsp;</label>
+                <input type="text" required id="editFaculty">
+            </div>
+            <div class="input-box">
+                <label for="Phone">Phone&nbsp;</label>
+                <input type="text" required id="editPhone">
+            </div>
+            <div class="input-box">
+                <label for="Email">Email&nbsp;</label>
+                <input type="text" required id="editEmail">
+            </div>
+            <div class="input-box">
+                <label for="Shift">Shift&nbsp;</label>
+                <select name="Shift" id="editShift" class="select" required>
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <label for="Age">Age&nbsp;</label>
+                <input type="number" required id="editAge" min="15" max="60">
+            </div>
+            <div class="input-box">
+                <label for="Semester">Semeter&nbsp;</label>
+                <input type="number" required id="editSemester" max="8" min="1" value="1">
+            </div>
+            <div class="input-box">
+                <label for="Password">Password&nbsp;</label>
+                <input type="text" required id="editPassword">
+            </div>
+            <div class="btn">
+                <button id="save">Save Changes</button>
+            </div>
+        </form>
+    </div>
+
+    <main>
+            <ul class="side mobile-menu hide" id="mobile-menu">
+                <li class="list" id="dashboard">DASHBOARD</li>
+                <li class="list" id="admission">ADMISSION</li>
+                <li class="list" id="teacher">TEACHERS</li>
+                <li class="list" id="student">STUDENTS</li>
+                <li class="list" id="chats">CHATS</li>
+                <li class="list" id="apply">APPLY SUGGEST</li>
+                <li class="list" id="feedback">FEEDBACK</li>
+                <li class="list" id="logout">LOGOUT <img src="icons/log-out.svg" ></li>
+            </ul>
+        <aside class="side-bar side-bar1">
+            <ul class="side laptop-menu">
+                <li class="list" id="dashboard">DASHBOARD</li>
+                <li class="list" id="admission">ADMISSION</li>
+                <li class="list" id="teacher">TEACHERS</li>
+                <li class="list" id="student">STUDENTS</li>
+                <li class="list" id="chats">CHATS</li>
+                <li class="list" id="apply">APPLY SUGGEST</li>
+                <li class="list" id="feedback">FEEDBACK</li>
+                <li class="list" id="logout">LOGOUT <img src="icons/log-out.svg" ></li>
+            </ul>
+        </aside>
+        <div class="right-side">
+
+            <!-- Dashboard -->
+            <div class="dashboard">
+                
+                <div class="dashboard-inside">
+                    <h2 class="dashboard-text">Dashboard <img src="icons/sliders.svg" ></h2>
+                    <h3 class="admissiondetails-text">Admission Details</h3>
+                    <section class="admissiondetails">
+                        <div class="details-box">
+                            <h3>Total Applications</h3>
+                            <div class="applicat-num">
+                                <div class="number" id="total-applicants"></div>
+                                <div class="logo">
+                                    <img src="icons/check-circle.svg" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="details-box">
+                            <h3>Teachers Applications</h3>
+                            <div class="applicat-num">
+                                <div class="number" id="total_teachers"></div>
+                                <div class="logo">
+                                    <img src="icons/users.svg" >
+                                </div>
+                            </div>
+                            <div class="view-details">
+                                <a href="#" id="TCdetails">View Details</a>
+                                <div class="icon">
+                                    <img src="icons/chevron-right.svg" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="details-box">
+                            <h3>Students Applications</h3>
+                            <div class="applicat-num">
+                                <div class="number" id="total_students"></div>
+                                <div class="logo">
+                                    <img src="icons/users.svg" >
+                                </div>
+                            </div>
+                            <div class="view-details">
+                                <a href="#" id="STdetails">View Details</a>
+                                <div class="icon">
+                                    <img src="icons/chevron-right.svg" >
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- RECENT STUDENT APPLICANT -->
+                    <section class="recent-applicant">
+                            <h2> <img src="icons/table.svg"> Recent Student Applicant</h2>
+                        <table class="recent-table">
+                            <thead class="recenttablehead">
+                                <tr>
+                                    <th class="numberth">#</th>
+                                    <th>Name</th>
+                                    <th>F/Name</th>
+                                    <th>Age</th>
+                                    <th>Gender</th>
+                                    <th>Faculty</th>
+                                    <th>Semester</th>
+                                    <th>Shift</th>
+                                    <th>Phone</th>
+                                    <th>Password</th>
+                                </tr>
+                            </thead>
+                            <tbody class="recenttable-body" id="recent-students">
+                                
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- RECENT TEACHER APPLICANT -->
+                    <section class="recent-applicant">
+                            <h2><img src="icons/table.svg">Recent Teacher Applicant</h2>
+                        <table class="recent-table">
+                            <thead class="recenttablehead">
+                                <tr>
+                                    <th class="numberth">#</th>
+                                    <th>Name</th>
+                                    <th>Subject</th>
+                                    <th>Age</th>
+                                    <th>Gender</th>
+                                    <th>Faculty</th>
+                                    <th>Semester</th>
+                                    <th>Shift</th>
+                                    <th>Phone</th>
+                                    <th>Password</th>
+                                </tr>
+                            </thead>
+                            <tbody class="recenttable-body" id="recent-teachers">
+                                
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Admission Menu -->
+            <div class="Admission hide">
+                <!-- Choosing Buttons -->
+                <div class="choosingbtns hide">
+                    <div class="btnouter">
+                        <button id="studentform">Student Form</button>
+                    </div>
+                    <div class="btnouter">
+                        <button id="teacherform">Teacher Form</button>
+                    </div>
+                </div>
+
+                <!-- Student Admission Form -->
+                <div class="container hide">
+                    <div class="header">
+                        <h2>Student Admission Form</h2>
+                    </div>
+                    <form action="" class="form">
+                        <div class="image-container">
+                            <div class="image">
+                                <img src="profile.png" alt="Profile Image" id="profile-pic">
+                            </div>
+                            <input type="file" accept="images/*" id="imageupload" required>
+                        </div>
+                        <div class="details">
+                            <div class="input-box">
+                                <label for="username">Username&nbsp;</label>
+                                <input type="text" required name="username" placeholder="Enter Username eg.Munir Rahman">
+                            </div>
+                            <div class="input-box">
+                                <label for="FName">F/Name&nbsp;</label>
+                                <input type="text" required name="FName"
+                                    placeholder="Enter Father Name eg.Munir Rahman">
+                            </div>
+                            <div class="input-box">
+                                <label for="Gender">Gender&nbsp;</label>
+                                <select name="Gender" id="Gender" class="select" required>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                            <div class="input-box">
+                                <label for="Faculty">Faculty&nbsp;</label>
+                                <input type="text" required name="Faculty"
+                                    placeholder="Enter Faculty eg.Computer Science">
+                            </div>
+                            <div class="input-box">
+                                <label for="Phone">Phone&nbsp;</label>
+                                <input type="text" required name="Phone"
+                                    placeholder="Enter Phone with Country Code eg.+93711717893">
+                            </div>
+                            <div class="input-box">
+                                <label for="Email">Email&nbsp;</label>
+                                <input type="text" required name="Email" placeholder="Enter Email eg.example@gmai.com">
+                            </div>
+                            <div class="input-box">
+                                <label for="Shift">Shift&nbsp;</label>
+                                <select name="Shift" id="shift" class="select" required>
+                                    <option value="PM">PM</option>
+                                    <option value="AM">AM</option>
+                                </select>
+                            </div>
+                            <div class="input-box">
+                                <label for="Age">Age&nbsp;</label>
+                                <input type="number" required name="Age" min="15" max="50">
+                            </div>
+                            <div class="input-box">
+                                <label for="Semester">Semeter&nbsp;</label>
+                                <input type="number" required name="Semester" max="8" min="1" value="1">
+                            </div>
+                            <div class="input-box">
+                                <label for="Password">Password&nbsp;</label>
+                                <input type="password" required name="Password" placeholder="Enter Unique Password">
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <button id="submitbtn">Submit</button>
+                        </div>
+                        <div class="gobackbtnform">
+                            <button id="gobackform" onclick="go_back_form()"><img src="icons/corner-down-left.svg" alt="Go back">Back</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Teacher Admission Form -->
+                <div class="container2 hide">
+                    <form action="" class="teacherform">
+                        <div class="header">
+                            <h2>Teachers Admission Form</h2>
+                        </div>
+                        <div class="image-container">
+                            <div class="image">
+                                <img src="profile.png" alt="Profile Image" id="profile-pic2">
+                            </div>
+                            <input type="file" accept="images/*" id="imageupload2" required>
+                        </div>
+                        <div class="details">
+                            <div class="input-box">
+                                <label for="username">Username&nbsp;</label>
+                                <input type="text" required name="username"
+                                    placeholder="Enter Username eg.Munir Rahman">
+                            </div>
+                            <div class="input-box">
+                                <label for="FName">Subject&nbsp;</label>
+                                <select required name="FName" class="select">
+                                    <option value="Data_Structure">Data_Structure</option>
+                                    <option value="Programming">Programming</option>
+                                    <option value="Network">Network</option>
+                                    <option value="Graphics">Graphics</option>
+                                </select>
+                            </div>
+                            <div class="input-box">
+                                <label for="Gender">Gender&nbsp;</label>
+                                <select name="Gender" id="Gender" class="select" required>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                            <div class="input-box">
+                                <label for="Faculty">Faculty&nbsp;</label>
+                                <input type="text" required name="Faculty"
+                                    placeholder="Enter Faculty eg.Computer Science">
+                            </div>
+                            <div class="input-box">
+                                <label for="Phone">Phone&nbsp;</label>
+                                <input type="text" required name="Phone"
+                                    placeholder="Enter Phone with Country Code eg.+93711717893">
+                            </div>
+                            <div class="input-box">
+                                <label for="Email">Email&nbsp;</label>
+                                <input type="text" required name="Email" placeholder="Enter Email eg.example@gmai.com">
+                            </div>
+                            <div class="input-box">
+                                <label for="Shift">Shift&nbsp;</label>
+                                <select name="Shift" id="shift" class="select" required>
+                                    <option value="PM">PM</option>
+                                    <option value="AM">AM</option>
+                                </select>
+                            </div>
+                            <div class="input-box">
+                                <label for="Age">Age&nbsp;</label>
+                                <input type="number" required name="Age" min="10" max="110">
+                            </div>
+                            <div class="input-box">
+                                <label for="Semester">Semeter&nbsp;</label>
+                                <input type="number" required name="Semester" max="8" min="1" value="1">
+                            </div>
+                            <div class="input-box">
+                                <label for="Password">Password&nbsp;</label>
+                                <input type="password" required name="Password" placeholder="Enter Unique Password">
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <button id="teachersubmitbtn" class="teacherbtn">Submit</button>
+                        </div>
+                        <div class="gobackbtnform">
+                            <button id="gobackform" onclick="go_back_form()"><img src="icons/corner-down-left.svg" alt="Go back">Back</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Teachers Management -->
+            <div class="Teachers hide">
+                <table class="teacherstable">
+                    <thead class="headername">
+                        <td colspan="13">
+                            <h2 class="tabletop-text">All Teachers Details</h2>
+                        </td>
+                    </thead>
+                    <thead class="thead">
+                        <tr>
+                            <th class="numberth">#</th>
+                            <th>Name</th>
+                            <th>Subject</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Faculty</th>
+                            <th>Semester</th>
+                            <th>Shift</th>
+                            <th>Phone</th>
+                            <th>Password</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody class="teachertbody">
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Student -->
+            <div class="students hide">
+                <table class="student hide">
+                    <thead class="headername">
+                        <td colspan="13">
+                            <h2 class="tabletop-text">All Students Details</h2>
+                        </td>
+                    </thead>
+                    <thead class="thead">
+                        <tr>
+                            <th class="numberth">#</th>
+                            <th>Name</th>
+                            <th>F/Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Faculty</th>
+                            <th>Semester</th>
+                            <th>Shift</th>
+                            <th>Phone</th>
+                            <th>Password</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody">
+
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Chat -->
+            <div class="chat hide">
+                <div class="chat-page">
+                    <h2 class="top-text">Messaging Chat Application</h2>
+                    <div class="chat-page-body">
+                        <!-- All Students and Teachers Will Add Auto From Local Storage -->
+                    </div>
+                    <div class="chat-page-body2">
+                        
+                    </div>
+                </div>
+
+            <!-- Inside of User Chat mean Messaging Page -->
+                <div class="chat-inside hide">
+                    <!-- Header of Chat -->
+                    <div class="chat-head">
+                        <!-- Chat Header Will be Auto Add of Every Person -->
+                    </div>
+
+                    <!-- Body of Chat -->
+                    <div class="chat-body">
+                        <!-- Auto Message -->
+                        
+                        <div class="chat-messages">
+                            <!-- It Will Add When You Send Message -->
+                        </div>
+                    </div>
+
+                    <!-- Chat Footer Send Message -->
+                    <div class="write-message">
+                        <div class="input-msg">
+                            <input type="text" id="msg-input" required placeholder="Enter Your Message to Send">
+                        </div>
+                        <div class="sendbtn">
+                            <button id="send-btn">▷</button>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+
+        <!-- Apply Suggestion -->
+        <div class="applysuggestion hide">
+            <table class="applysuggestion-table">
+                    <thead class="headername">
+                        <td colspan="13">
+                            <h2 class="tabletop-text">All Apply Suggestion Details</h2>
+                        </td>
+                    </thead>
+                    <thead class="thead">
+                        <tr>
+                            <th class="numberth">#</th>
+                            <th>Name</th>
+                            <th>F/Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Faculty</th>
+                            <th>Semester</th>
+                            <th>Shift</th>
+                            <th>Phone</th>
+                            <th>Password</th>
+                        </tr>
+                    </thead>
+                    <tbody class="apply_body">
+
+                    </tbody>
+                </table>
+            </div>
+
+        <!-- FeedBack Right Side -->
+        <div class="feedback hide">
+            <section class="feedback-inside">
+                <h2>Student & Teachers FeedBack</h2>
+                <table class="feedbacktable">
+                    <thead class="thead">
+                        <tr>
+                            <th>#</th>
+                            <th>RATE</th>
+                            <th>POSITION</td>
+                            <th>FEEDBACK</th>
+                        </tr>
+                    </thead>
+                    <tbody class="feedback-body">
+                        
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        </div>
+    </main>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>
