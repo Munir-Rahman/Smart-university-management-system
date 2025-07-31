@@ -22,7 +22,7 @@ let demo_account= document.getElementById("demo_account");
 //User Variable to Store User Details mean Choose ADMIN/TEACHER/STUDENT
 let user = "";
 //Send ADMIN Deetails to Local Storage
-if(admindetails === "[]"){
+if(admindetails.length === 0){
     admindetails.push({
         username:"Munir Rahman",
         Password:"Munir123",
