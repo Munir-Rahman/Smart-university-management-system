@@ -214,6 +214,13 @@
     </script>
 
     <script defer src="https://vercel.com/analytics/script.js"></script>
+    <script>
+    window.addEventListener('load', () => {
+      if (window.va) {
+        window.va.track();
+      }
+    });
+  </script>
 
 
 </body>
