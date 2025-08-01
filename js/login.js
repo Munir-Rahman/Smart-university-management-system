@@ -22,12 +22,14 @@ let demo_account= document.getElementById("demo_account");
 //User Variable to Store User Details mean Choose ADMIN/TEACHER/STUDENT
 let user = "";
 //Send ADMIN Deetails to Local Storage
-if(admindetails.length === 0){
-    admindetails.push({
-        username:"Munir Rahman",
-        Password:"Munir123",
-    });
-    localStorage.setItem("admin",JSON.stringify(admindetails));
+let addadmin = () => {
+    if(admindetails.length === 0){
+        admindetails.push({
+            username:"Munir Rahman",
+            Password:"Munir123",
+        });
+        localStorage.setItem("admin",JSON.stringify(admindetails));
+    }
 }
 
 //When User Entr it Should Login
@@ -195,5 +197,6 @@ let studentfun = () => {
 
 window.onload = () => {
     user = "ADMIN";
+    addadmin();
     demo();
 }
