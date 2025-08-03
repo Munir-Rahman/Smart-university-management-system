@@ -896,10 +896,18 @@ aside{
 
 /* Mobile Menu */
 header .menu-icon{
+    justify-content: flex-start;
     height: 2.3rem;
-    background-color: rgb(13, 54, 130); 
+    background-color: #111827; 
     font-size: 2rem;
     padding-left: 0.5rem;
+    text-align: left;
+}
+.menu-icon img{
+    text-align: left;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
 }
 .mobile-menu{
     position: fixed;
@@ -941,6 +949,9 @@ header .menu-icon{
 @media (max-width : 900px){
     .welcome-msg{
         font-size: 1rem;
+    }
+    .menu-icon{
+        display: flex;
     }
     .added-msg{
         width: 50%;
@@ -988,6 +999,9 @@ header .menu-icon{
     }
     .mobile-menu{
         width: 100%;
+    }
+    .menu-icon{
+        display: flex;
     }
     .added-msg{
         width: 80%;

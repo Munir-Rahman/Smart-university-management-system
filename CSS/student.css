@@ -695,10 +695,18 @@ aside{
 
 /* Mobile Menu */
 header .menu-icon{
+    justify-content: flex-start;
     height: 2.3rem;
     background-color: #111827; 
     font-size: 2rem;
     padding-left: 0.5rem;
+    text-align: left;
+}
+.menu-icon img{
+    text-align: left;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
 }
 .mobile-menu{
     position: fixed;
@@ -749,6 +757,9 @@ header .menu-icon{
     aside{
         border: none;
     }
+    .menu-icon{
+        display: flex;
+    }
     .side-bar{
         display: none;
     }
@@ -785,6 +796,9 @@ header .menu-icon{
 @media (max-width : 480px) {
     .profile{
         width: 100vw;
+    }
+    .menu-icon{
+        display: flex;
     }
     .mobile-menu{
         width: 100%;

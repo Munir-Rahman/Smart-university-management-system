@@ -89,6 +89,7 @@ body{
 .box .logo img{
     height: 100%;
     width: 100%;
+    background-color: #fff;
 }
 .input-boxes .input label{
     height: 3rem;

@@ -40,6 +40,7 @@ nav .logo{
 .logo .image img{
     height: 100%;
     width: 100%;
+    background-color: #fff;
 }
 nav .menu{
     display: flex;
@@ -95,6 +96,7 @@ nav .menu{
 .drop-down .menu-name img{
     height: 100%;
     width: 100%;
+    background-color: #fff;
 }
 /* Home */
 main .home{
