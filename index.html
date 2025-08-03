@@ -206,12 +206,33 @@
             <p>&copy; 2025 SUMS System | Released: July 31, 2025</p>
         </footer>
     </main>
+
     <script src="js/main.js"></script>
+<!-- Load Vercel Analytics (deferred) -->
+<script defer src="https://va.vercel-scripts.com/script.js"></script>
+
+<!-- Wait for the whole page AND the analytics script to load -->
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const checkVA = () => {
+      if (window.va) {
+        window.va.track();
+      } else {
+        // Retry in 100ms if not yet available
+        setTimeout(checkVA, 100);
+      }
+    };
+    checkVA();
+  });
+</script>
+    <!-- Vercel Analytics -->
     <script
-    defer
-    src="https://vercel.com/analytics/script.js"
-    data-token="prj_0Kr9I6SEmzTWobFhy1XVL48UL9kx">
+      defer
+      src="https://vercel.com/analytics/script.js"
+      data-token="prj_0Kr9I6SEmzTW">
     </script>
+  </body>
+</html>
 
 </body>
 </html>
