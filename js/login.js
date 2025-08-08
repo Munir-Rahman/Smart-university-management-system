@@ -81,7 +81,6 @@ let demo = () => {
         if(user === "ADMIN"){
             window.location.href = "Admin.html";
         } else if(user === "TEACHER"){
-                demoaddedST = true;
                 demoaccount(2);
                 storeindexTC = 0;
                 localStorage.setItem("userindexTC", JSON.stringify(storeindexTC));
