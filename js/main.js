@@ -3,6 +3,7 @@ let application = JSON.parse(localStorage.getItem("apply_suggestions")) ?? [];
 
 //DOM Elements
 let loginbtn = document.querySelector("#login");
+let logbtn = document.getElementById("loginbtn");
 let form = document.querySelector(".form");
 let apply_now = document.querySelector(".apply-now");
 let after_apply = document.querySelector(".after-apply");
@@ -23,6 +24,10 @@ dropdown_menu.addEventListener('click', () => {
 });
 
 loginbtn.addEventListener('click', () => {
+    window.location.href = "login.html";
+});
+
+logbtn.addEventListener('click', () => {
     window.location.href = "login.html";
 });
 

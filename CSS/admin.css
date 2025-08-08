@@ -694,6 +694,12 @@ header .menu-icon{
     .welcome-msg{
         font-size: 1.1rem;
     }
+    .container .form{
+        justify-content: flex-start;
+    }
+    .teacherform{
+        justify-content: flex-start;
+    }
     .menu-icon{
         display: flex;
         justify-content: flex-start;
@@ -749,6 +755,12 @@ header .menu-icon{
 @media (max-width : 480px){
     .welcome .welcome-msg{
         font-size: 1rem;
+    }
+    .container .form{
+        justify-content: flex-start;
+    }
+    .teacherform{
+        justify-content: flex-start;
     }
     .menu-icon{
         display: flex;
